@@ -100,16 +100,23 @@
 .list-box {
   display: block;
   width: 30%;
+
+  margin-bottom: 30px;
 }
+
+.list-box:hover .list-box-img {
+  transform: translateY(-10px);
+  filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.2));
+}
+
 .list-box-img {
   width: 100%;
-
   height: 17.09vw;
   max-height: 200px;
-
   overflow: hidden;
-
   margin-bottom: 24px;
+
+  transition: all 0.2s ease-in;
 }
 
 .list-box-cate {
@@ -188,4 +195,60 @@
 .main-bottom-cards {
   width: 25.64%;
   max-width: 300px;
+}
+
+.card-link {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  height: 330px;
+  background: url("../images/p1.png") no-repeat center;
+  background-size: cover;
+  margin-bottom: 30px;
+
+  overflow: hidden;
+  /* 배치된 내용의 좌표(x, y)가 이동함 */
+  transition: transform 0.2s ease-in;
+}
+
+.card-link:hover {
+  transform: translateY(-10px);
+  filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.2));
+}
+
+.card-txt {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+}
+.card-title {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+}
+.card-count {
+  display: block;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 5px 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  margin-left: 3px;
+}
+
+/* 반응형 */
+@media all and (max-width: 1024px) {
+  .main-bottom-cards {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .card-link {
+    width: 240px;
+    height: 266px;
+  }
 }
