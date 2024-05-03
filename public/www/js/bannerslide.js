@@ -1,5 +1,4 @@
 window.addEventListener("load", function () {
-  // 할일
   const dataUrl = "./apis/banner.json";
   fetch(dataUrl)
     .then((respose) => {
@@ -11,15 +10,15 @@ window.addEventListener("load", function () {
       for (let i = 0; i < result.length; i++) {
         const obj = result[i];
         const temp = `<div class="swiper-slide">
-              <a href="${obj.url}" style="background: url('./images/${obj.pic}') no-repeat center; background-size:cover;">
-              <p class="slide-title">${obj.title}</p>
-              </a>
-          </div>`;
-        tagS += temp;
+            <a href="${obj.url}" style="background: url('./images/${obj.pic}') no-repeat center; background-size:cover;">
+            <p class="slide-title">${obj.title}</p>
+            </a>
+        </div>`;
+        tagS = tagS + temp;
       }
       const whereTag = document.querySelector(".bannerslide .swiper-wrapper");
       whereTag.innerHTML = tagS;
-      const bannerslide = new Swiper(".bannerslide", {
+      const bannerSlide = new Swiper(".bannerslide", {
         loop: true,
         pagination: {
           el: ".swiper-pagination",
