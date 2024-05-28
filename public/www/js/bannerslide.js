@@ -1,11 +1,11 @@
 window.addEventListener("load", function () {
   const dataUrl = "./apis/banner.json";
   fetch(dataUrl)
-    .then((respose) => {
+    .then(respose => {
       const result = respose.json();
       return result;
     })
-    .then((result) => {
+    .then(result => {
       let tagS = "";
       for (let i = 0; i < result.length; i++) {
         const obj = result[i];
@@ -26,7 +26,7 @@ window.addEventListener("load", function () {
         },
       });
     })
-    .catch((error) => {
+    .catch(error => {
       console.log(error);
     });
 });

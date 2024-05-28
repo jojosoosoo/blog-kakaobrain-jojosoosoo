@@ -6,19 +6,34 @@ import Footer from "./components/Footer";
 import Main from "./components/Main";
 import "./css/reset.css";
 import "./css/common.css";
+import { useState } from "react";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-// 컴포넌트 만들기
+const Wrap = () => {
+  // js 코드 자리
+  const [mbMenuOpen, setMbMenuOpen] = useState(false);
+  const clickMbbt = () => {
+    setMbMenuOpen(prev => {
+      return !prev;
+    });
+  };
 
-root.render(
-  <>
-    <Popup></Popup>
+  return (
     <div className="wrap">
-      <Header></Header>
-      <MbHeader></MbHeader>
+      <Header clickMbbt={clickMbbt} mbMenuOpen={mbMenuOpen}></Header>
+      <MbHeader
+        mbMenuOpen={mbMenuOpen}
+        setMbMenuOpen={setMbMenuOpen}
+      ></MbHeader>
       <Main></Main>
       <Footer></Footer>
     </div>
-  </>
+  );
+};
+root.render(
+  <>
+    <Popup></Popup>
+    <Wrap></Wrap>
+  </>,
 );

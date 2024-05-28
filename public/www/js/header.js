@@ -8,11 +8,11 @@ window.addEventListener("load", function () {
   const headerActiveValue = 0;
 
   /*
-   * 스크롤 바의 위치에 따라서 css 적용 함수
-   *  _html: 대상 html 태그
-   *  _tgY: css가 적용될 위치 값
-   *  _active: 적용할 css 클래스명
-   *  _scY: 스크롤바의 위치
+   * 스크롤바의 위치에 따라서 css 적용 함수
+   *  _html : 대상 html 태그
+   *  _tgY : css 가 적용될 위치 값
+   *  _active : 적용할 css 클래스명
+   *  _scY : 스크롤바의 위치
    */
   function showLine(_html, _tgY, _active, _scY) {
     // 브라우저의 스크롤바의 위치를 파악해야함.
