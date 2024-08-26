@@ -3,7 +3,7 @@ import MainBottomListItem from "./MainBottomListItem";
 import { getCrew, getNews } from "../apis/api";
 
 const MainBottomList = () => {
-  // use 의 hook 자리
+  // use의 hook 자리
   const news = useRef(null);
   // 데이터
   const [newsList, setNewsList] = useState([]);
@@ -29,7 +29,7 @@ const MainBottomList = () => {
 
   return (
     <div className="main-bottom-list">
-      {/* <!-- 새글 리스트 --> */}
+      {/* <!-- 새 글 리스트 --> */}
       <div className="main-bottom-list-news">
         <h2>NEW. 따끈따끈 새로 나온 글 🔥</h2>
         <div className="list-wrap" id="news" ref={news}>

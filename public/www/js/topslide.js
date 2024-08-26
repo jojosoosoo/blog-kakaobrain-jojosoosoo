@@ -1,6 +1,6 @@
-// DOM 을 다루려고 하는 목적인 경우
+// DOM을 다루려고 하는 목적인 경우
 window.addEventListener("load", function () {
-  // 1. 외부에서 자료를 불러온다.
+  // 1. 외부에서 자료를 불러옴
   const dataUrl = "./apis/topslide.json";
 
   fetch(dataUrl)
@@ -10,7 +10,7 @@ window.addEventListener("load", function () {
       return data;
     })
     .then((result) => {
-      // Step 2. json 변경된 데이터 활용하기
+      // 2. json 변경된 데이터 활용하기
       // 전체 글자 모음
       let slideTags = "";
 
@@ -27,13 +27,13 @@ window.addEventListener("load", function () {
         slideTags = slideTags + test;
       }
 
-      // 2. 자료를 이용해서 슬라이드에 배치할 html 을 만든다.
-      // 원하는 장소에 출력해 보자.
+      // 2. 자료를 이용해서 슬라이드에 배치할 html을 만듦
+      // 원하는 장소에 출력해 보기
       const whereTag = document.querySelector(".topslide .swiper-wrapper");
       whereTag.innerHTML = slideTags;
 
-      // 3. html 완성후 swiper 를 생성한다.
-      // 기본코드를 넣어보자.
+      // 3. html 완성 후 swiper를 생성
+      // 기본 코드
       const topSlide = new Swiper(".topslide", {
         loop: true,
         speed: 800,
@@ -47,7 +47,7 @@ window.addEventListener("load", function () {
         },
       });
 
-      // 4. 마우스 오버시 슬라이드를 일시 멈춤 및 재실행
+      // 4. 마우스 오버시 슬라이드를 일시 정지 및 재실행
       const slideArea = document.querySelector(".topslide");
       slideArea.addEventListener("mouseenter", function () {
         topSlide.autoplay.stop();

@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import "../css/popup.css";
 const Popup = () => {
   // 자바스크립트 코드 자리
-  // html 태그를 찾을 때는 useRef 를 사용하자.
+  // html 태그를 찾을 때는 useRef 사용
   // 창닫기 버튼 html 태그 찾기
   const closeBt = useRef(null);
   // 팝업창 html 태그 찾기
@@ -25,7 +25,7 @@ const Popup = () => {
       closeBt_Elememt.addEventListener("click", handleClick);
     }
 
-    // cleanUp 함수 : 컴포넌트가 파괴될때 실행하는 함수
+    // cleanUp 함수: 컴포넌트가 파괴될 때 실행하는 함수
     return () => {
       if (closeBt_Elememt) {
         closeBt_Elememt.removeEventListener("click", handleClick);

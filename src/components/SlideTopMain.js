@@ -15,7 +15,7 @@ const SlideTopMain = () => {
   const slideArea = useRef(null);
   // 슬라이드 데이터 관리 (화면 갱신 반영)
   const [list, setList] = useState([]);
-  // swiper 로 만든 html 을 제어한다.
+  // swiper로 만든 html을 제어
   const topSlide = useRef(null);
   // swiper 옵션
   const swiperOption = {
@@ -59,7 +59,7 @@ const SlideTopMain = () => {
         {/* 이유는 아래처럼 자동 코등 되니까.. */}
         {/* <div className="swiper-wrapper"></div> */}
 
-        {/* 아이템 배치 : 리액트 반복문은 kye 가 필요하다. */}
+        {/* 아이템 배치: 리액트 반복문은 key 필요 */}
         {list.map((item, index, arr) => (
           <SwiperSlide key={index}>
             <SlideTopMainItem

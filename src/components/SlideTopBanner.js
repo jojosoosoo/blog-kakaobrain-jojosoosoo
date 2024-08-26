@@ -24,16 +24,16 @@ const SlideTopBanner = () => {
     modules: [Pagination],
   };
 
-  // axios 를 연동하는 경우는 2가지 경우가 많다.
-  // 1. 초기 화면 출력용 api (로딩창 ? )
+  // axios를 연동하는 경우 2가지 경우
+  // 1. 초기 화면 출력용 api (로딩창?)
   // 2. 사용자 행동에 따른 api
 
-  // 1번용 axios 를 위해서 useEffect 를 쓴다.
-  // axios 를 컴포넌트에서 사용할때 비동기 함수로 처리함.
+  // 1번용 axios를 위해 useEffect 사용
+  // axios를 컴포넌트에서 사용할 때 비동기 함수로 처리
 
   const getBannerCall = async () => {
     const result = await getBanner();
-    // 화면 갱신을 위해서 useState 로 담아야 한다.
+    // 화면 갱신을 위해서 useState로 담아야 함
     setTopSlideData(result);
   };
 

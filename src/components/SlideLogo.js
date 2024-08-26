@@ -7,8 +7,8 @@ import "swiper/css/effect-fade";
 import "swiper/css/autoplay";
 
 const SlideLogo = ({ isOver }) => {
-  // Swiper 를 저장한다.
-  // html 의 swiper 를 모듈로 삽입하면 최종적으로 html 생성됨
+  // Swiper 저장
+  // html의 swiper를 모듈로 삽입하면 최종적으로 html 생성됨
   const swLogoSlide = useRef(null);
   // 이미지 리스트
   const imgArr = [
@@ -22,14 +22,14 @@ const SlideLogo = ({ isOver }) => {
     "logo-blog08.png",
     "logo-blog09.png",
   ];
-  // Swiper 의 옵션은 별도로 변수에 담아서 관리추천
+  // Swiper의 옵션은 별도로 변수에 담아서 관리 추천
   const swiperOption = {
     speed: 500,
     effect: "fade",
     autoplay: { delay: 1000, disableOnInteraction: false },
     modules: [EffectFade, Autoplay],
     onInit: swiper => {
-      // 매개변수 swiper 는 현재 생성된 슬라이드를 말함.
+      // 매개변수 swiper는 현재 생성된 슬라이드를 말함
       swiper.autoplay.stop();
       swLogoSlide.current = swiper;
     },

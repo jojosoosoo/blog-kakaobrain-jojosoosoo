@@ -1,6 +1,6 @@
-// html 을 제어하므로
+// html을 제어하므로
 window.addEventListener("load", function () {
-  //할일
+  //할 일
   const dataUrl = "./apis/news.json";
   fetch(dataUrl)
     .then((response) => {
@@ -9,8 +9,8 @@ window.addEventListener("load", function () {
       return result;
     })
     .then((result) => {
-      //   console.log(result);
-      // 할일작성
+      //  console.log(result);
+      // 할 일 작성
       // 전체 html 저장용 일반 변수
       let allTag = "";
       const news = document.querySelector("#news");
@@ -29,7 +29,7 @@ window.addEventListener("load", function () {
       //   allTag = allTag + tag;
       // }
 
-      // 배열이라면 반복하자.
+      // 배열이라면 반복
       result.forEach((item) => {
         const tag = `<a href=${item.link} class="list-box">
         <div class="list-box-img br-20" style="background: url('./images/${item.imgpath}') no-repeat center; background-size: cover"></div>

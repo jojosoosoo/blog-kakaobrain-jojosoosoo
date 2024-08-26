@@ -7,7 +7,7 @@ const MbHeader = ({ mbMenuOpen, setMbMenuOpen }) => {
 
   // 모바일 메뉴 관련 HTML 처리
   useEffect(() => {
-    // 메뉴 보이고, 숨기기를 합니다.
+    // 메뉴 보이고 숨기기
     if (mbMenuOpen) {
       mbBg.current.classList.add("mb-header-bg-show");
       mbMenu.current.classList.add("mb-header-menu-show");

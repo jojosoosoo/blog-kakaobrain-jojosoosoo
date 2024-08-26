@@ -14,7 +14,7 @@ const Header = function ({ clickMbbt, mbMenuOpen }) {
   // 로고 영역
   const headerLogoLink = useRef(null);
 
-  // JSX Element  렌더링 완료시
+  // JSX Element 렌더링 완료시
   useEffect(() => {
     // const headerLogoLink = document.querySelector(".header-logo-link");
     headerLogoLink.current.addEventListener("mouseenter", function () {
@@ -67,15 +67,15 @@ const Header = function ({ clickMbbt, mbMenuOpen }) {
     mbBt.current.addEventListener("click", function (e) {
       // a태그 막기
       e.preventDefault();
-      // 상위 컴포넌트로 부터 Props 전달 받아 실행
+      // 상위 컴포넌트로 부터 Props 전달받아 실행
       clickMbbt();
     });
 
     return () => {
       mbBt.current.removeEventListener("click", function (e) {
-        // a태그 막기
+        // a 태그 막기
         e.preventDefault();
-        // 상위 컴포넌트로 부터 Props 전달 받아 실행
+        // 상위 컴포넌트로 부터 Props 전달받아 실행
         clickMbbt();
       });
     };
@@ -119,7 +119,7 @@ const Header = function ({ clickMbbt, mbMenuOpen }) {
               <a href="#">소식</a>
             </li>
             <li>
-              <a href="#">팀&크루</a>
+              <a href="#">팀 & 크루</a>
             </li>
             <li>
               <a href="#">영입</a>

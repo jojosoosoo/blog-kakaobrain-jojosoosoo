@@ -1,9 +1,9 @@
-// html 을 제어하므로
+// html을 제어하므로
 window.addEventListener("load", function () {
-  // html 에 내용 출력하기
+  // html에 내용 출력하기
   const makeHtml = (_result) => {
-    //   console.log(_result);
-    // 할일작성
+    //  console.log(_result);
+    // 할 일 작성
     // 전체 html 저장용 일반 변수
     let allTag = "";
     const crew = document.querySelector("#crew");
@@ -22,7 +22,7 @@ window.addEventListener("load", function () {
     //       </a>`;
     //   allTag = allTag + tag;
     // }
-    // 추천합니다. (조건은 대상이 배열인 경우)
+    // 아래 추천 (조건은 대상이 배열인 경우)
     _result.forEach((item) => {
       const tag = `<a href=${item.link} class="list-box">
           <div class="list-box-img br-20" style="background: url('./images/${item.imgpath}') no-repeat center; background-size: cover"></div>
@@ -39,7 +39,7 @@ window.addEventListener("load", function () {
     crew.innerHTML = allTag;
   };
 
-  //할일
+  // 할 일
   const dataUrl = "./apis/crew.json";
   fetch(dataUrl)
     .then((response) => {

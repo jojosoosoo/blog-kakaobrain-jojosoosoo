@@ -4,11 +4,11 @@ import { getCards, getNews } from "../apis/api";
 // Swiper 활용
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-// Swiper 를 실시간으로 생성, 삭제하는 경우 활용
+// Swiper를 실시간으로 생성, 삭제하는 경우 활용
 import SwiperInit from "swiper";
 
 const MainBottomCards = () => {
-  // swiper 를 보관해 두고 화면 사이즈에 따라서 만들고, 지우고
+  // swiper를 보관해 두고 화면 사이즈에 따라서 만들고, 지우기
   const cardSlide = useRef(null);
   const [cardList, setCardList] = useState([]);
   // swiper 옵션
@@ -24,25 +24,25 @@ const MainBottomCards = () => {
   const makeCardSlide = () => {
     const wWidth = window.innerWidth;
     if (wWidth > 1024) {
-      // swiper 를 제거
-      // 리액트 swiper 에서는 destroyed 속성이 있어요.
+      // swiper 제거
+      // 리액트 swiper에서는 destroyed 속성이 있음
       if (cardSlide.current) {
-        // swiper 를 제거하는 코드
+        // swiper 제거하는 코드
         cardSlide.current.destroy();
       }
     } else {
-      // swiper 를 생성한다.
-      // swiper 작동시키기(모바일에서만 작동해야함)
-      // cardSlide.current?.destroyed 참이면..
+      // swiper 생성
+      // swiper 작동시키기 (모바일에서만 작동해야 함)
+      // cardSlide.current?.destroyed 참이면
       if (cardSlide.current?.destroyed) {
-        // Swiper 를 실시간 만들기
+        // Swiper 실시간 만들기
         cardSlide.current = new SwiperInit(".cardslide", swiperOption);
       }
     }
   };
 
   // 화면의 리사이즈에 따른 슬라이드 변경 코드
-  // cardSlide 상태가 바뀜을 체크한다.
+  // cardSlide 상태가 바뀜을 체크
   useEffect(() => {
     window.addEventListener("resize", makeCardSlide);
     return () => {
@@ -56,7 +56,7 @@ const MainBottomCards = () => {
     makeCardSlide();
   };
   useEffect(() => {
-    // axiso 호출 조심하자. await 필요
+    // axiso 호출 조심 (await 필요)
     getCardsCall();
 
     return () => {};
