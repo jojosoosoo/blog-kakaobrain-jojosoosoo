@@ -16,7 +16,7 @@
   padding: 50px;
   background: #ffffff;
   line-height: 20px;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 .popup-content strong {
   display: block;
@@ -31,10 +31,11 @@
   border: 1px solid rgba(0, 0, 0, 0.2);
   background: #fff;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 7px;
 }
 
 .popup-close:hover {
   background: #f668b5;
   color: #ffffff;
+  transition: 0.3s;
 }

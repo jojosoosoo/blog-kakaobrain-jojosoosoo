@@ -37,11 +37,19 @@ const Popup = () => {
     <div className="popup" ref={popup}>
       <div className="popup-content">
         <p>
-          <strong>해당 사이트는 스터디용으로 제작되었으며, 모든 리소스의 저작권은 원저작자에게 있습니다.</strong> <br />
-          * 본 사이트는 Chrome 에 최적화되어 있습니다. <br />* 해당 사이트와 관련한 문제가 있으면 연락을 주시면 감사하겠습니다.
+          <strong>
+            해당 사이트는 스터디용으로 제작되었으며, 모든 리소스의 저작권은
+            원저작자에게 있습니다.
+          </strong>
+          <br />
+          * 본 사이트는 Chrome에 최적화되어 있습니다. <br />* 해당 사이트와
+          관련한 문제가 있으면 연락 부탁드립니다.
+          <br />
+          <br />
+          mybirth811@gmail.com 조수현
         </p>
         <button className="popup-close" ref={closeBt}>
-          창닫기
+          닫기
         </button>
       </div>
     </div>
